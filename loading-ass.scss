@@ -1,0 +1,173 @@
+@keyframes a{
+    0%{
+        background-color: lightgray;
+    }
+    10%{
+        background-color: lightgray;
+    }
+    11%{
+        background-color:black;
+    }
+}
+@keyframes b{
+    0%{
+        background-color: lightgray;
+    }
+    30%{
+        background-color: lightgray;
+    }
+    31%{
+        background-color: black;
+    }
+}
+@keyframes c{
+    0%{
+        background-color: lightgray;
+    }
+    50%{
+        background-color: lightgray;
+    }
+    51%{
+        background-color: black;
+    }
+}
+@keyframes d{
+    0%{
+        background-color: lightgray;
+    }
+    70%{
+        background-color: lightgray;
+    }
+    71%{
+        background-color: black;
+    }
+}
+@keyframes e{
+    0%{
+        background-color: lightgray;
+    }
+    90%{
+        background-color: lightgray;
+    }
+    91%{
+        background-color: black;
+    }
+}
+@keyframes loading{
+    50%, 100%{
+        color: #8A9B0F;
+        right: 100%;           
+    }
+}
+@keyframes loading-1{
+    50%, 100%{
+        color: #C02942;
+        right: 100%;           
+    }
+}
+@keyframes loading-2{
+    50%, 100%{
+        color: #00A0B0;
+        right: 100%;           
+    }
+}
+*{
+    box-sizing:border-box;
+}
+body{
+    margin:0;
+    width: 100%;
+    height: 100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    width: 500px;
+    height: 500px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .loading{
+        font-size: 58px;
+        font-family: sans-serif;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+    .loading-1{
+        display: none;
+    }
+    .loading-2{
+        display: none;
+    }
+    .big-box{
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        .box{
+            height: 50px;
+            width: 50px;
+            background-color: black;
+            margin-right: 20px;
+        }
+        .box-1{
+            // animation: name duration timing-function delay iteration-count direction fill-mode;
+            animation: a 5s linear infinite;    
+        }
+        .box-2{
+            animation: b 5s linear infinite;    
+        }
+        .box-3{
+            animation: c 5s linear infinite ;    
+        }
+        .box-4{
+            animation: d 5s linear infinite;    
+        }
+        .box-5{
+            animation: e 5s linear infinite;    
+        }
+
+    }
+    &:hover{
+        .big-box{
+            display: none;
+        }
+        .loading-con{
+            width: 230px;
+            height: 60px;
+            overflow:hidden;
+            position: relative;
+            .loading{
+                font-size: 50px;
+                font-family: sans-serif;
+                font-weight: bold;
+                animation: loading 6.6s linear infinite;
+                position: absolute;
+                right: -200%;
+                color: lightgray;
+            }
+            .loading-1{
+                display:unset;
+                font-size: 50px;
+                font-family: sans-serif;
+                font-weight: bold;
+                animation: loading-1 6.6s 2s linear infinite;
+                position: absolute;
+                right:-200%;
+                color: lightgray;
+            }
+            .loading-2{
+                display:unset;
+                font-size: 50px;
+                font-family: sans-serif;
+                font-weight: bold;
+                animation: loading-2 6.6s 4s linear infinite;
+                position: absolute;
+                right: -200%;
+                color: lightgray;
+            }
+        }
+    }
+
+}
